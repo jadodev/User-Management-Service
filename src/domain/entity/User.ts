@@ -13,6 +13,7 @@ export class User {
       this.name = name;
       this.role = role;
       this.phone = phone;
+      this.id = id;
     }
 
     public getId(): string {
