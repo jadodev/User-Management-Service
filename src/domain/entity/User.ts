@@ -2,21 +2,21 @@ import { UserRole } from "../enum/UserRole";
 import { Phone } from "../valueObject/Phone";
 
 export class User {
-    id: string;
+    id?: string;
     identification: number;
     name: string;
     role: UserRole;
     phone?: Phone;
   
-    constructor(id: string, identification: number, name: string, role: UserRole, phone?: Phone) {
+    constructor(id: string | undefined, identification: number, name: string, role: UserRole, phone?: Phone) {
+      this.id = id; 
       this.identification = identification;
       this.name = name;
       this.role = role;
       this.phone = phone;
-      this.id = id;
     }
 
-    public getId(): string {
+    public getId(): string | undefined {
         return this.id;
     }
 

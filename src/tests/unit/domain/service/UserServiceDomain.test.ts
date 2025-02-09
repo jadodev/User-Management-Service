@@ -1,8 +1,8 @@
-import { UserServiceDomain } from '../../../domain/service/UserServiceDomain';
-import { User } from '../../../domain/entity/User';
-import { UserInterfacePortOut } from '../../../domain/port/out/UserInterfacePortOut';
-import { UserRole } from '../../../domain/enum/UserRole';
-import { Phone } from '../../../domain/valueObject/Phone';
+import { UserServiceDomain } from '../../../../domain/service/UserServiceDomain';
+import { User } from '../../../../domain/entity/User';
+import { UserInterfacePortOut } from '../../../../domain/port/out/UserInterfacePortOut';
+import { UserRole } from '../../../../domain/enum/UserRole';
+import { Phone } from '../../../../domain/valueObject/Phone';
 
 const mockUserRepository: jest.Mocked<UserInterfacePortOut> = {
   save: jest.fn(),
