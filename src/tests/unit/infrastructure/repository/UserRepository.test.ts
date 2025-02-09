@@ -1,13 +1,14 @@
-import { UserRepository } from '../../../infrastructure/repository/UserRepository';
-import { User } from '../../domain/entity/User';
-import { UserRole } from '../../domain/enum/UserRole';
-import { Database } from '../../../infrastructure/config/DataBase';
-import { InvalidUserRoleException } from '../../../exceptions/InvalidRoleError';
-import { NotFoundError } from '../../../exceptions/NotFoundError';
-import { DatabaseException } from '../../../exceptions/DatabaseException';
-import { PoolConnection } from 'mysql2/promise';
+import { PoolConnection } from "mysql2/promise";
+import { Database } from "../../../../infrastructure/config/DataBase";
+import { UserRepository } from "../../../../infrastructure/repository/UserRepository";
+import { User } from "../../../../domain/entity/User";
+import { UserRole } from "../../../../domain/enum/UserRole";
+import { InvalidUserRoleException } from "../../../../exceptions/InvalidUserRoleException";
+import { DatabaseException } from "../../../../exceptions/DatabaseException";
+import { NotFoundError } from "../../../../exceptions/NotFoundError";
 
-jest.mock('../../../infrastructure/config/DataBase');
+
+jest.mock('../../../../infrastructure/config/DataBase');
 const mockGetConnection = Database.getConnection as jest.MockedFunction<typeof Database.getConnection>;
 
 const mockConnection: Partial<PoolConnection> = {
@@ -29,7 +30,7 @@ describe('UserRepository', () => {
         it('debe lanzar InvalidUserRoleException si el rol es inválido', async () => {
             const user = new User('1', 1234567890, 'John Doe', 'INVALID_ROLE' as UserRole);
 
-            await expect(userRepository.save(user)).rejects.toThrow(InvalidUserRoleException);
+            await expect(userRepository.save(user)).rejects.toThrow(`Invalid role: ${user.role}`);
         });
     });
 

@@ -1,8 +1,9 @@
-import { Phone } from '../../domain/valueObject/Phone';
-import { UserRole } from '../../domain/enum/UserRole';
-import { User } from '../../domain/entity/User';
-import { UserDTO } from '../../../application/dto/UserDto';
-import { UserMapper } from '../../../application/mapper/UserMapper';
+import { UserDTO } from "../../../../application/dto/UserDto";
+import { UserMapper } from "../../../../application/mapper/UserMapper";
+import { User } from "../../../../domain/entity/User";
+import { UserRole } from "../../../../domain/enum/UserRole";
+import { Phone } from "../../../../domain/valueObject/Phone";
+
 
 describe('UserMapper', () => {
     describe('toUserDTO', () => {

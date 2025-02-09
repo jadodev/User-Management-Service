@@ -1,12 +1,12 @@
 import request from 'supertest';
 import express from 'express';
-import { UserController } from '../../../infrastructure/controller/UserController';
-import { UserDTO } from '../../../application/dto/UserDto';
-import { UserApplicationService} from '../../../application/service/UserApplication';
-import { ValidationError } from '../../../exceptions/ValidationError';
-import { NotFoundError } from '../../../exceptions/NotFoundError';
-import { DatabaseException } from '../../../exceptions/DatabaseException';
-import { UserRole } from '../../domain/enum/UserRole';
+import { UserController } from '../../../../infrastructure/controller/UserController';
+import { UserApplicationService } from '../../../../application/service/UserApplication';
+import { UserDTO } from '../../../../application/dto/UserDto';
+import { UserRole } from '../../../../domain/enum/UserRole';
+import { ValidationError } from '../../../../exceptions/ValidationError';
+import { DatabaseException } from '../../../../exceptions/DatabaseException';
+import { NotFoundError } from '../../../../exceptions/NotFoundError';
 
 const mockUserApplicationService = {
     execute: jest.fn(),

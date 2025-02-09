@@ -73,6 +73,9 @@ export class UserApplicationService {
             }
             return UserMapper.toUserDTO(user);
         } catch (error) {
+            if (error instanceof NotFoundError) {
+                throw error;
+            }
             throw new DatabaseException(`Error retrieving user with identification ${identification}.`);
         }
     }
