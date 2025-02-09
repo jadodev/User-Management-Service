@@ -3,7 +3,6 @@ import { Database } from "../../../../infrastructure/config/DataBase";
 import { UserRepository } from "../../../../infrastructure/repository/UserRepository";
 import { User } from "../../../../domain/entity/User";
 import { UserRole } from "../../../../domain/enum/UserRole";
-import { InvalidUserRoleException } from "../../../../exceptions/InvalidUserRoleException";
 import { DatabaseException } from "../../../../exceptions/DatabaseException";
 import { NotFoundError } from "../../../../exceptions/NotFoundError";
 
