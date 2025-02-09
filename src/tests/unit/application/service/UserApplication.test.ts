@@ -1,12 +1,12 @@
 import { UserApplicationService } from '../../../application/service/UserApplication';
-import { UserInterfacePortIn } from '../../../domain/port/in/UserInterfacePortIn';
+import { UserInterfacePortIn } from '../../domain/port/in/UserInterfacePortIn';
 import { UserDTO } from '../../../application/dto/UserDto';
 import { ValidationError } from '../../../exceptions/ValidationError';
 import { NotFoundError } from '../../../exceptions/NotFoundError';
 import { DatabaseException } from '../../../exceptions/DatabaseException';
-import { User } from '../../../domain/entity/User';
-import { UserRole } from '../../../domain/enum/UserRole';
-import { Phone } from '../../../domain/valueObject/Phone';
+import { User } from '../../domain/entity/User';
+import { UserRole } from '../../domain/enum/UserRole';
+import { Phone } from '../../domain/valueObject/Phone';
 
 const mockUserService: jest.Mocked<UserInterfacePortIn> = {
   create: jest.fn(),

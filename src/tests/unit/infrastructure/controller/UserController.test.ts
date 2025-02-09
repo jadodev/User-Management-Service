@@ -6,7 +6,7 @@ import { UserApplicationService} from '../../../application/service/UserApplicat
 import { ValidationError } from '../../../exceptions/ValidationError';
 import { NotFoundError } from '../../../exceptions/NotFoundError';
 import { DatabaseException } from '../../../exceptions/DatabaseException';
-import { UserRole } from '../../../domain/enum/UserRole';
+import { UserRole } from '../../domain/enum/UserRole';
 
 const mockUserApplicationService = {
     execute: jest.fn(),
