@@ -26,7 +26,7 @@ describe('UserRepository', () => {
 
     describe('save', () => {
 
-        it('debe lanzar InvalidUserRoleException si el rol es inválido', async () => {
+        it('It should throw an InvalidUserRoleException if the role is invalid.', async () => {
             const user = new User('1', 1234567890, 'John Doe', 'INVALID_ROLE' as UserRole);
 
             await expect(userRepository.save(user)).rejects.toThrow(`Invalid role: ${user.role}`);
@@ -34,7 +34,7 @@ describe('UserRepository', () => {
     });
 
     describe('getById', () => {
-        it('debe retornar un CUSTOMER si existe', async () => {
+        it('It should return a CUSTOMER if it exists.', async () => {
             const mockUserData = {
                 id: '1',
                 identification: 1234567890,
@@ -53,7 +53,7 @@ describe('UserRepository', () => {
             expect(user?.getRole()).toBe(UserRole.CUSTOMER);
         });
 
-        it('debe lanzar NotFoundError si el usuario no existe', async () => {
+        it('It should throw a NotFoundError if the user does not exist.', async () => {
             (mockConnection.execute as jest.Mock)
                 .mockResolvedValueOnce([[]])
                 .mockResolvedValueOnce([[]]); 
@@ -63,7 +63,7 @@ describe('UserRepository', () => {
     });
 
     describe('getByIdentification', () => {
-        it('debe retornar un DRIVER si existe', async () => {
+        it('It should return a DRIVER if it exists.', async () => {
             const mockUserData = {
                 id: '1',
                 identification: 1234567890,
@@ -82,7 +82,7 @@ describe('UserRepository', () => {
             expect(user.getRole()).toBe(UserRole.DRIVER);
         });
 
-        it('debe lanzar DatabaseException si hay un error de conexión', async () => {
+        it('It should throw a DatabaseException if there is a connection error.', async () => {
             (mockConnection.execute as jest.Mock).mockRejectedValue(new Error('DB Error'));
 
             await expect(userRepository.getByIdentification(1234567890)).rejects.toThrow(DatabaseException);

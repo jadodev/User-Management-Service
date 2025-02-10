@@ -31,6 +31,8 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:20.17.17"],\
           ["@types/supertest", "npm:6.0.2"],\
+          ["@types/swagger-jsdoc", "npm:6.0.4"],\
+          ["@types/swagger-ui-express", "npm:4.1.7"],\
           ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.1"],\
           ["dotenv", "npm:16.4.7"],\
@@ -41,6 +43,8 @@ const RAW_RUNTIME_STATE =
           ["nodemon", "npm:3.1.9"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["supertest", "npm:7.0.0"],\
+          ["swagger-jsdoc", "npm:6.2.8"],\
+          ["swagger-ui-express", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:5.0.1"],\
           ["ts-jest", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:29.2.5"],\
           ["ts-node", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
@@ -55,6 +59,65 @@ const RAW_RUNTIME_STATE =
           ["@ampproject/remapping", "npm:2.3.0"],\
           ["@jridgewell/gen-mapping", "npm:0.3.8"],\
           ["@jridgewell/trace-mapping", "npm:0.3.25"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@apidevtools/json-schema-ref-parser", [\
+      ["npm:9.1.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@apidevtools-json-schema-ref-parser-npm-9.1.2-563d0b267a-10c0.zip/node_modules/@apidevtools/json-schema-ref-parser/",\
+        "packageDependencies": [\
+          ["@apidevtools/json-schema-ref-parser", "npm:9.1.2"],\
+          ["@jsdevtools/ono", "npm:7.1.3"],\
+          ["@types/json-schema", "npm:7.0.15"],\
+          ["call-me-maybe", "npm:1.0.2"],\
+          ["js-yaml", "npm:4.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@apidevtools/openapi-schemas", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@apidevtools-openapi-schemas-npm-2.1.0-5401d2b368-10c0.zip/node_modules/@apidevtools/openapi-schemas/",\
+        "packageDependencies": [\
+          ["@apidevtools/openapi-schemas", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@apidevtools/swagger-methods", [\
+      ["npm:3.0.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@apidevtools-swagger-methods-npm-3.0.2-2f505abefb-10c0.zip/node_modules/@apidevtools/swagger-methods/",\
+        "packageDependencies": [\
+          ["@apidevtools/swagger-methods", "npm:3.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@apidevtools/swagger-parser", [\
+      ["npm:10.0.3", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@apidevtools-swagger-parser-npm-10.0.3-9e554f93c2-10c0.zip/node_modules/@apidevtools/swagger-parser/",\
+        "packageDependencies": [\
+          ["@apidevtools/swagger-parser", "npm:10.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:51abfd6363ba598b3ebd615b95bad5285983ddbd41321584e648eb4a3edbc6b47d6e42a130950a6afca601603c272722db94a177ccb3230fd61d4abbdd2996bf#npm:10.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/@apidevtools-swagger-parser-virtual-1dd28218c1/5/AppData/Local/Yarn/Berry/cache/@apidevtools-swagger-parser-npm-10.0.3-9e554f93c2-10c0.zip/node_modules/@apidevtools/swagger-parser/",\
+        "packageDependencies": [\
+          ["@apidevtools/swagger-parser", "virtual:51abfd6363ba598b3ebd615b95bad5285983ddbd41321584e648eb4a3edbc6b47d6e42a130950a6afca601603c272722db94a177ccb3230fd61d4abbdd2996bf#npm:10.0.3"],\
+          ["@apidevtools/json-schema-ref-parser", "npm:9.1.2"],\
+          ["@apidevtools/openapi-schemas", "npm:2.1.0"],\
+          ["@apidevtools/swagger-methods", "npm:3.0.2"],\
+          ["@jsdevtools/ono", "npm:7.1.3"],\
+          ["@types/openapi-types", null],\
+          ["call-me-maybe", "npm:1.0.2"],\
+          ["openapi-types", null],\
+          ["z-schema", "npm:5.0.5"]\
+        ],\
+        "packagePeers": [\
+          "@types/openapi-types",\
+          "openapi-types"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1261,6 +1324,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@jsdevtools/ono", [\
+      ["npm:7.1.3", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@jsdevtools-ono-npm-7.1.3-cb2313543b-10c0.zip/node_modules/@jsdevtools/ono/",\
+        "packageDependencies": [\
+          ["@jsdevtools/ono", "npm:7.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@npmcli/agent", [\
       ["npm:3.0.0", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@npmcli-agent-npm-3.0.0-169e79294f-10c0.zip/node_modules/@npmcli/agent/",\
@@ -1290,6 +1362,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@pkgjs-parseargs-npm-0.11.0-cd2a3fe948-10c0.zip/node_modules/@pkgjs/parseargs/",\
         "packageDependencies": [\
           ["@pkgjs/parseargs", "npm:0.11.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@scarf/scarf", [\
+      ["npm:1.4.0", {\
+        "packageLocation": "./.yarn/unplugged/@scarf-scarf-npm-1.4.0-f6114c29f9/node_modules/@scarf/scarf/",\
+        "packageDependencies": [\
+          ["@scarf/scarf", "npm:1.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1528,6 +1609,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/json-schema", [\
+      ["npm:7.0.15", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@types-json-schema-npm-7.0.15-fd16381786-10c0.zip/node_modules/@types/json-schema/",\
+        "packageDependencies": [\
+          ["@types/json-schema", "npm:7.0.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/methods", [\
       ["npm:1.1.4", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@types-methods-npm-1.1.4-8565dc8af4-10c0.zip/node_modules/@types/methods/",\
@@ -1634,6 +1724,26 @@ const RAW_RUNTIME_STATE =
           ["@types/supertest", "npm:6.0.2"],\
           ["@types/methods", "npm:1.1.4"],\
           ["@types/superagent", "npm:8.1.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/swagger-jsdoc", [\
+      ["npm:6.0.4", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@types-swagger-jsdoc-npm-6.0.4-595c64efe2-10c0.zip/node_modules/@types/swagger-jsdoc/",\
+        "packageDependencies": [\
+          ["@types/swagger-jsdoc", "npm:6.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/swagger-ui-express", [\
+      ["npm:4.1.7", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@types-swagger-ui-express-npm-4.1.7-51b9c74afb-10c0.zip/node_modules/@types/swagger-ui-express/",\
+        "packageDependencies": [\
+          ["@types/swagger-ui-express", "npm:4.1.7"],\
+          ["@types/express", "npm:5.0.0"],\
+          ["@types/serve-static", "npm:1.15.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1790,6 +1900,13 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["argparse", "npm:1.0.10"],\
           ["sprintf-js", "npm:1.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/argparse-npm-2.0.1-faff7999e6-10c0.zip/node_modules/argparse/",\
+        "packageDependencies": [\
+          ["argparse", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2144,6 +2261,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["call-me-maybe", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/call-me-maybe-npm-1.0.2-a465269a37-10c0.zip/node_modules/call-me-maybe/",\
+        "packageDependencies": [\
+          ["call-me-maybe", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["callsites", [\
       ["npm:3.1.0", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/callsites-npm-3.1.0-268f989910-10c0.zip/node_modules/callsites/",\
@@ -2318,6 +2444,22 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["combined-stream", "npm:1.0.8"],\
           ["delayed-stream", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["commander", [\
+      ["npm:6.2.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/commander-npm-6.2.0-5c82761f33-10c0.zip/node_modules/commander/",\
+        "packageDependencies": [\
+          ["commander", "npm:6.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:9.5.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/commander-npm-9.5.0-993b3f2434-10c0.zip/node_modules/commander/",\
+        "packageDependencies": [\
+          ["commander", "npm:9.5.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2595,6 +2737,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["doctrine", [\
+      ["npm:3.0.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/doctrine-npm-3.0.0-c6f1615f04-10c0.zip/node_modules/doctrine/",\
+        "packageDependencies": [\
+          ["doctrine", "npm:3.0.0"],\
+          ["esutils", "npm:2.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["dotenv", [\
       ["npm:16.4.7", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/dotenv-npm-16.4.7-29680c94f8-10c0.zip/node_modules/dotenv/",\
@@ -2792,6 +2944,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/esprima-npm-4.0.1-1084e98778-10c0.zip/node_modules/esprima/",\
         "packageDependencies": [\
           ["esprima", "npm:4.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["esutils", [\
+      ["npm:2.0.3", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/esutils-npm-2.0.3-f865beafd5-10c0.zip/node_modules/esutils/",\
+        "packageDependencies": [\
+          ["esutils", "npm:2.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3151,6 +3312,19 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:7.1.6", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/glob-npm-7.1.6-1ce3a5189a-10c0.zip/node_modules/glob/",\
+        "packageDependencies": [\
+          ["glob", "npm:7.1.6"],\
+          ["fs.realpath", "npm:1.0.0"],\
+          ["inflight", "npm:1.0.6"],\
+          ["inherits", "npm:2.0.4"],\
+          ["minimatch", "npm:3.1.2"],\
+          ["once", "npm:1.4.0"],\
+          ["path-is-absolute", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:7.2.3", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/glob-npm-7.2.3-2d866d17a5-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
@@ -3246,6 +3420,8 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:20.17.17"],\
           ["@types/supertest", "npm:6.0.2"],\
+          ["@types/swagger-jsdoc", "npm:6.0.4"],\
+          ["@types/swagger-ui-express", "npm:4.1.7"],\
           ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.1"],\
           ["dotenv", "npm:16.4.7"],\
@@ -3256,6 +3432,8 @@ const RAW_RUNTIME_STATE =
           ["nodemon", "npm:3.1.9"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["supertest", "npm:7.0.0"],\
+          ["swagger-jsdoc", "npm:6.2.8"],\
+          ["swagger-ui-express", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:5.0.1"],\
           ["ts-jest", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:29.2.5"],\
           ["ts-node", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
@@ -4172,6 +4350,14 @@ const RAW_RUNTIME_STATE =
           ["esprima", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.1.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/js-yaml-npm-4.1.0-3606f32312-10c0.zip/node_modules/js-yaml/",\
+        "packageDependencies": [\
+          ["js-yaml", "npm:4.1.0"],\
+          ["argparse", "npm:2.0.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["jsbn", [\
@@ -4265,11 +4451,38 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lodash.get", [\
+      ["npm:4.4.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/lodash.get-npm-4.4.2-7bda64ed87-10c0.zip/node_modules/lodash.get/",\
+        "packageDependencies": [\
+          ["lodash.get", "npm:4.4.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.isequal", [\
+      ["npm:4.5.0", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/lodash.isequal-npm-4.5.0-f8b0f64d63-10c0.zip/node_modules/lodash.isequal/",\
+        "packageDependencies": [\
+          ["lodash.isequal", "npm:4.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lodash.memoize", [\
       ["npm:4.1.2", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/lodash.memoize-npm-4.1.2-0e6250041f-10c0.zip/node_modules/lodash.memoize/",\
         "packageDependencies": [\
           ["lodash.memoize", "npm:4.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.mergewith", [\
+      ["npm:4.6.2", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/lodash.mergewith-npm-4.6.2-7d2d4201ec-10c0.zip/node_modules/lodash.mergewith/",\
+        "packageDependencies": [\
+          ["lodash.mergewith", "npm:4.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5602,6 +5815,64 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["swagger-jsdoc", [\
+      ["npm:6.2.8", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/swagger-jsdoc-npm-6.2.8-d69a72a086-10c0.zip/node_modules/swagger-jsdoc/",\
+        "packageDependencies": [\
+          ["swagger-jsdoc", "npm:6.2.8"],\
+          ["commander", "npm:6.2.0"],\
+          ["doctrine", "npm:3.0.0"],\
+          ["glob", "npm:7.1.6"],\
+          ["lodash.mergewith", "npm:4.6.2"],\
+          ["swagger-parser", "npm:10.0.3"],\
+          ["yaml", "npm:2.0.0-1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["swagger-parser", [\
+      ["npm:10.0.3", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/swagger-parser-npm-10.0.3-51abfd6363-10c0.zip/node_modules/swagger-parser/",\
+        "packageDependencies": [\
+          ["swagger-parser", "npm:10.0.3"],\
+          ["@apidevtools/swagger-parser", "virtual:51abfd6363ba598b3ebd615b95bad5285983ddbd41321584e648eb4a3edbc6b47d6e42a130950a6afca601603c272722db94a177ccb3230fd61d4abbdd2996bf#npm:10.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["swagger-ui-dist", [\
+      ["npm:5.18.3", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/swagger-ui-dist-npm-5.18.3-592e0fa048-10c0.zip/node_modules/swagger-ui-dist/",\
+        "packageDependencies": [\
+          ["swagger-ui-dist", "npm:5.18.3"],\
+          ["@scarf/scarf", "npm:1.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["swagger-ui-express", [\
+      ["npm:5.0.1", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/swagger-ui-express-npm-5.0.1-a36db7d969-10c0.zip/node_modules/swagger-ui-express/",\
+        "packageDependencies": [\
+          ["swagger-ui-express", "npm:5.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:5.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/swagger-ui-express-virtual-47e691e2a6/5/AppData/Local/Yarn/Berry/cache/swagger-ui-express-npm-5.0.1-a36db7d969-10c0.zip/node_modules/swagger-ui-express/",\
+        "packageDependencies": [\
+          ["swagger-ui-express", "virtual:080d2f65348f4ac1fb4aafa7dfbd5e9c188e7fae2d91fcf182f4a7049df0743816cabe53f857e5229c695e0c5029fdf8a9e4ab6ad900433ab5a575fb9d79cc1b#npm:5.0.1"],\
+          ["@types/express", "npm:5.0.0"],\
+          ["express", "npm:4.21.2"],\
+          ["swagger-ui-dist", "npm:5.18.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/express",\
+          "express"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tar", [\
       ["npm:7.4.3", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/tar-npm-7.4.3-1dbbd1ffc3-10c0.zip/node_modules/tar/",\
@@ -6032,6 +6303,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["yaml", [\
+      ["npm:2.0.0-1", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/yaml-npm-2.0.0-1-230a208429-10c0.zip/node_modules/yaml/",\
+        "packageDependencies": [\
+          ["yaml", "npm:2.0.0-1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["yargs", [\
       ["npm:17.7.2", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/yargs-npm-17.7.2-80b62638e1-10c0.zip/node_modules/yargs/",\
@@ -6071,6 +6351,19 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/yocto-queue-npm-0.1.0-c6c9a7db29-10c0.zip/node_modules/yocto-queue/",\
         "packageDependencies": [\
           ["yocto-queue", "npm:0.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["z-schema", [\
+      ["npm:5.0.5", {\
+        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/z-schema-npm-5.0.5-94fb0e21a9-10c0.zip/node_modules/z-schema/",\
+        "packageDependencies": [\
+          ["z-schema", "npm:5.0.5"],\
+          ["commander", "npm:9.5.0"],\
+          ["lodash.get", "npm:4.4.2"],\
+          ["lodash.isequal", "npm:4.5.0"],\
+          ["validator", "npm:13.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\

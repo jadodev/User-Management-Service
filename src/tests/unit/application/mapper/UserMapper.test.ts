@@ -7,7 +7,7 @@ import { Phone } from "../../../../domain/valueObject/Phone";
 
 describe('UserMapper', () => {
     describe('toUserDTO', () => {
-      it('debe convertir un User a UserDTO correctamente', () => {
+      it('should correctly convert a User to UserDTO', () => {
         const user = new User(
           '1', 
           1234567890,
@@ -25,7 +25,7 @@ describe('UserMapper', () => {
         expect(userDTO.phone).toBe(user.getPhone());
       });
   
-      it('debe manejar un User sin teléfono correctamente', () => {
+      it('should handle a User without a phone correctly', () => {
         const user = new User(
           '1',
           1234567890,
@@ -40,7 +40,7 @@ describe('UserMapper', () => {
     });
   
     describe('toEntity', () => {
-      it('debe convertir un UserDTO a User correctamente', () => {
+      it('should correctly convert a UserDTO to User', () => {
         const userDTO = new UserDTO(
           1234567890, 
           'John Doe', 
@@ -57,7 +57,7 @@ describe('UserMapper', () => {
         expect(user.getPhone()).toBe(userDTO.phone);
       });
   
-      it('debe manejar un UserDTO sin teléfono correctamente', () => {
+      it('should handle a UserDTO without a phone correctly', () => {
         const userDTO = new UserDTO(
           1234567890,
           'John Doe',
@@ -70,7 +70,7 @@ describe('UserMapper', () => {
         expect(user.getPhone()).toBeUndefined();
       });
   
-      it('debe lanzar un error si el rol no es válido', () => {
+      it('should throw an error if the role is invalid', () => {
         const userDTO = new UserDTO(
           1234567890, 
           'John Doe', 

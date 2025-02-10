@@ -19,7 +19,7 @@ describe('UserServiceDomain', () => {
   });
 
   describe('create', () => {
-    it('debe guardar y retornar un usuario', async () => {
+    it('should save and return a user', async () => {
       const mockUser = new User(
         '1',
         1234567890,
@@ -39,7 +39,7 @@ describe('UserServiceDomain', () => {
   });
 
   describe('getById', () => {
-    it('debe retornar un usuario si existe', async () => {
+    it('should return a user if it exists', async () => {
       const mockUser = new User(
         '1',
         1234567890,
@@ -56,7 +56,7 @@ describe('UserServiceDomain', () => {
       expect(mockUserRepository.getById).toHaveBeenCalledWith('1');
     });
 
-    it('debe retornar null si el usuario no existe', async () => {
+    it('should return null if the user does not exist', async () => {
       mockUserRepository.getById.mockResolvedValue(null);
 
       const result = await userService.getById('999');
@@ -67,7 +67,7 @@ describe('UserServiceDomain', () => {
   });
 
   describe('getByIdentification', () => {
-    it('debe retornar un usuario por identificación', async () => {
+    it('should return a user by identification', async () => {
       const mockUser = new User(
         '1',
         1234567890,

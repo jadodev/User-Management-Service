@@ -23,7 +23,7 @@ describe('UserApplicationService', () => {
   });
 
   describe('execute', () => {
-    it('debe crear un usuario y retornar un UserDTO', async () => {
+    it('should create a user and return a UserDTO', async () => {
         const userDTO = new UserDTO(
           1234567890, 
           'John Doe', 
@@ -50,7 +50,7 @@ describe('UserApplicationService', () => {
         expect(result.phone).toBe(userDTO.phone);
       });
       
-    it('debe lanzar ValidationError si el UserDTO es inválido', async () => {
+    it('should throw ValidationError if the UserDTO is invalid', async () => {
       const invalidUserDTO = new UserDTO(
         undefined as any,
         '', 
@@ -61,7 +61,7 @@ describe('UserApplicationService', () => {
       await expect(userApplicationService.execute(invalidUserDTO)).rejects.toThrow(ValidationError);
     });
 
-    it('debe lanzar DatabaseException si ocurre un error en el servicio de dominio', async () => {
+    it('should throw DatabaseException if there is an error in the domain service', async () => {
       const userDTO = new UserDTO(
         1234567890, 
         'John Doe', 
@@ -69,14 +69,14 @@ describe('UserApplicationService', () => {
         '1234567890' 
       );
 
-      mockUserService.create.mockRejectedValue(new Error('Error de base de datos'));
+      mockUserService.create.mockRejectedValue(new Error('Database error'));
 
       await expect(userApplicationService.execute(userDTO)).rejects.toThrow(DatabaseException);
     });
   });
 
   describe('findById', () => {
-    it('debe retornar un UserDTO si el usuario existe', async () => {
+    it('should return a UserDTO if the user exists', async () => {
       const mockUser = new User(
         '1',
         1234567890,
@@ -97,21 +97,21 @@ describe('UserApplicationService', () => {
       expect(mockUserService.getById).toHaveBeenCalledWith('1');
     });
 
-    it('debe lanzar NotFoundError si el usuario no existe', async () => {
+    it('should throw NotFoundError if the user does not exist', async () => {
         mockUserService.getById.mockResolvedValue(null);
     
         await expect(userApplicationService.findById('999')).rejects.toThrow(NotFoundError);
     });
 
-    it('debe lanzar DatabaseException si ocurre un error en el servicio de dominio', async () => {
-      mockUserService.getById.mockRejectedValue(new Error('Error de base de datos'));
+    it('should throw DatabaseException if there is an error in the domain service', async () => {
+      mockUserService.getById.mockRejectedValue(new Error('Database error'));
 
       await expect(userApplicationService.findById('1')).rejects.toThrow(DatabaseException);
     });
   });
 
   describe('findByIdentification', () => {
-    it('debe retornar un UserDTO si el usuario existe', async () => {
+    it('should return a UserDTO if the user exists', async () => {
       const mockUser = new User(
         '1',
         1234567890,
@@ -132,8 +132,8 @@ describe('UserApplicationService', () => {
       expect(mockUserService.getByIdentification).toHaveBeenCalledWith(1234567890);
     });
 
-    it('debe lanzar DatabaseException si ocurre un error en el servicio de dominio', async () => {
-      mockUserService.getByIdentification.mockRejectedValue(new Error('Error de base de datos'));
+    it('should throw DatabaseException if there is an error in the domain service', async () => {
+      mockUserService.getByIdentification.mockRejectedValue(new Error('Database error'));
 
       await expect(userApplicationService.findByIdentification(1234567890)).rejects.toThrow(DatabaseException);
     });

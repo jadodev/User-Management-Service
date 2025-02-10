@@ -27,7 +27,7 @@ describe('UserController', () => {
     });
 
     describe('POST /', () => {
-        it('debe crear un usuario y retornar 201', async () => {
+        it('It should create a user and return 201.', async () => {
             const userDTO: UserDTO = {
                 id: '1',
                 identification: 1234567890,
@@ -47,7 +47,7 @@ describe('UserController', () => {
             expect(mockUserApplicationService.execute).toHaveBeenCalledWith(userDTO);
         });
 
-        it('debe retornar 400 si los datos del usuario son inválidos', async () => {
+        it('It should return 400 if the users data is invalid.', async () => {
             const invalidUserDTO = {
                 identification: 1234567890,
                 name: '',
@@ -65,7 +65,7 @@ describe('UserController', () => {
             expect(response.body).toEqual({ message: 'User name is required.' });
         });
 
-        it('debe retornar 500 si ocurre un error en la base de datos', async () => {
+        it('It should return 500 if a database error occurs.', async () => {
             const userDTO: UserDTO = {
                 id: '1',
                 identification: 1234567890,
@@ -86,7 +86,7 @@ describe('UserController', () => {
     });
 
     describe('GET /:id', () => {
-        it('debe retornar un usuario y un código 200 si el usuario existe', async () => {
+        it('It should return a user and a 200 status code if the user exists.', async () => {
             const userDTO: UserDTO = {
                 id: '1',
                 identification: 1234567890,
@@ -105,7 +105,7 @@ describe('UserController', () => {
             expect(mockUserApplicationService.findById).toHaveBeenCalledWith('1');
         });
 
-        it('debe retornar 404 si el usuario no existe', async () => {
+        it('It should return 404 if the user does not exist.', async () => {
             mockUserApplicationService.findById.mockRejectedValue(new NotFoundError('User with ID 999 not found. NOT_FOUND'));
         
             const response = await request(app)
@@ -115,7 +115,7 @@ describe('UserController', () => {
             expect(response.body).toEqual({ message: 'User with ID 999 not found. NOT_FOUND' });
         });
 
-        it('debe retornar 500 si ocurre un error en la base de datos', async () => {
+        it('It should return 500 if a database error occurs.', async () => {
             mockUserApplicationService.findById.mockRejectedValue(new DatabaseException('Error retrieving user.'));
 
             const response = await request(app)
@@ -127,7 +127,7 @@ describe('UserController', () => {
     });
 
     describe('GET /user/:identification', () => {
-        it('debe retornar un usuario y un código 200 si el usuario existe', async () => {
+        it('It should return a user and a 200 status code if the user exists.', async () => {
             const userDTO: UserDTO = {
                 id: '1',
                 identification: 1234567890,
@@ -146,7 +146,7 @@ describe('UserController', () => {
             expect(mockUserApplicationService.findByIdentification).toHaveBeenCalledWith(1234567890);
         });
 
-        it('debe retornar 404 si el usuario no existe', async () => {
+        it('It should return 404 if the user does not exist.', async () => {
             mockUserApplicationService.findByIdentification.mockRejectedValue(new NotFoundError('User with identification 999 not found.'));
 
             const response = await request(app)
@@ -156,7 +156,7 @@ describe('UserController', () => {
             expect(response.body).toEqual({ message: 'User with identification 999 not found.' });
         });
 
-        it('debe retornar 500 si ocurre un error en la base de datos', async () => {
+        it('It should return 500 if a database error occurs.', async () => {
             mockUserApplicationService.findByIdentification.mockRejectedValue(new DatabaseException('Error retrieving user.'));
 
             const response = await request(app)
