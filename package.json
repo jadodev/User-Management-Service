@@ -42,5 +42,6 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     }
-  }
+  },
+  "packageManager": "yarn@4.6.0"
 }
