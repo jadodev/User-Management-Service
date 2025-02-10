@@ -7,9 +7,13 @@ import { Database } from "./infrastructure/config/DataBase";
 import { errorHandler } from "./infrastructure/middleware/errorHandler";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
-const PORT = 9000;
+const PORT_SWAGGER = process.env.PORT_SWAGGER;
+const PORT = process.env.PORT;
 
 const swaggerOptions = {
   swaggerDefinition: {
@@ -25,7 +29,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${PORT}`,
+        url: `http://localhost:${PORT_SWAGGER}`,
       },
     ],
   },

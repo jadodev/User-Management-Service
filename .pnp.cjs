@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/express", "npm:5.0.0"],\
           ["@types/jest", "npm:29.5.14"],\
-          ["@types/node", "npm:20.17.17"],\
+          ["@types/node", "npm:22.13.1"],\
           ["@types/supertest", "npm:6.0.2"],\
           ["@types/swagger-jsdoc", "npm:6.0.4"],\
           ["@types/swagger-ui-express", "npm:4.1.7"],\
@@ -1637,14 +1637,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.17.17", {\
-        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@types-node-npm-20.17.17-bbcd13f536-10c0.zip/node_modules/@types/node/",\
-        "packageDependencies": [\
-          ["@types/node", "npm:20.17.17"],\
-          ["undici-types", "npm:6.19.8"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:22.13.1", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/@types-node-npm-22.13.1-f9de886009-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
@@ -3418,7 +3410,7 @@ const RAW_RUNTIME_STATE =
           ["hex-expressjs", "workspace:."],\
           ["@types/express", "npm:5.0.0"],\
           ["@types/jest", "npm:29.5.14"],\
-          ["@types/node", "npm:20.17.17"],\
+          ["@types/node", "npm:22.13.1"],\
           ["@types/supertest", "npm:6.0.2"],\
           ["@types/swagger-jsdoc", "npm:6.0.4"],\
           ["@types/swagger-ui-express", "npm:4.1.7"],\
@@ -6011,7 +6003,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.17.17"],\
+          ["@types/node", "npm:22.13.1"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -6085,13 +6077,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["undici-types", [\
-      ["npm:6.19.8", {\
-        "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/undici-types-npm-6.19.8-9f12285b7a-10c0.zip/node_modules/undici-types/",\
-        "packageDependencies": [\
-          ["undici-types", "npm:6.19.8"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:6.20.0", {\
         "packageLocation": "../../../../AppData/Local/Yarn/Berry/cache/undici-types-npm-6.20.0-bd21e669af-10c0.zip/node_modules/undici-types/",\
         "packageDependencies": [\

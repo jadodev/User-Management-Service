@@ -1,20 +1,25 @@
-# Usamos la imagen oficial de Node.js como base
+# Usa la imagen oficial de Node.js como base
 FROM node:22-alpine
 
-# Establecemos el directorio de trabajo en el contenedor
+# Habilita Corepack y prepara la versión de Yarn (según lo que requiera tu proyecto)
+RUN corepack enable && corepack prepare yarn@4.6.0 --activate
+
+# Establece el directorio de trabajo en el contenedor
 WORKDIR /src/app
 
-# Copiamos los archivos de dependencias de Yarn
+# Copia los archivos de dependencias y la configuración de Yarn Berry
 COPY package.json yarn.lock ./
+COPY .yarn .yarn
+COPY .pnp.cjs .pnp.cjs
 
-# Instalamos las dependencias con Yarn
-RUN yarn install --frozen-lockfile
+# Instala las dependencias usando Yarn
+RUN yarn install --immutable
 
-# Copiamos el resto de los archivos de la aplicación
+# Copia el resto de los archivos de la aplicación
 COPY . .
 
-# Exponemos el puerto en el que la aplicación estará escuchando
+# Expon el puerto 7000 (en el contenedor)
 EXPOSE 7000
 
-# Comando para iniciar la aplicación con Yarn
+# Inicia la aplicación
 CMD ["yarn", "dev"]
