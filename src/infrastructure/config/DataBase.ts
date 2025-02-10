@@ -10,7 +10,7 @@ export class Database {
     if (!this.pool) {
       const mysql = require("mysql2/promise");
       this.pool = mysql.createPool({
-        host: process.env.DB_HOST || "localhost",
+        host: "mysql",
         user: process.env.DB_USER || "root",
         password: process.env.DB_PASSWORD || "root",
         database: process.env.DB_NAME || "mydb",

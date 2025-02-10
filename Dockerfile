@@ -5,7 +5,7 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 
 # Copia los archivos de definición de dependencias y configuración
-COPY package.json yarn.lock tsconfig.json ./
+COPY package.json yarn.lock tsconfig.json ./ 
 
 # Instala las dependencias (incluyendo dev)
 RUN yarn install --frozen-lockfile
@@ -23,6 +23,7 @@ WORKDIR /app
 
 # Copia los archivos necesarios para producción
 COPY package.json yarn.lock ./
+
 # Instala solo las dependencias de producción
 RUN yarn install --production
 
