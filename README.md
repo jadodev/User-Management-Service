@@ -1,5 +1,14 @@
 # User-Management-Service
 
+## Documentación de la API con Swagger
+
+La aplicación incluye documentación interactiva de la API generada con Swagger. Una vez que la aplicación esté en ejecución, puedes acceder a la documentación abriendo tu navegador y navegando a:
+
+**http://localhost:4001/api-docs**
+
+Asegúrate de que la aplicación se esté ejecutando en el puerto configurado para Swagger. Si necesitas cambiar el puerto, actualiza la configuración correspondiente en el archivo de entorno o en el archivo `docker-compose.yml`.
+
+
 ```plaintext
 \---src
     |   index.ts
