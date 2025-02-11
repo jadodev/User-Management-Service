@@ -11,8 +11,8 @@ export class Database {
       const mysql = require("mysql2/promise");
       this.pool = mysql.createPool({
         host: "mysql",
-        user: process.env.DB_USER || "root",
-        password: process.env.DB_PASSWORD || "root",
+        user: process.env.DB_USER || "user",
+        password: process.env.DB_PASSWORD || "password",
         database: process.env.DB_NAME || "mydb",
         waitForConnections: true,
         connectionLimit: 10,
